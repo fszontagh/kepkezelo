@@ -1,0 +1,4 @@
+kepkezelo
+=========
+
+PHP képkezelő osztály
