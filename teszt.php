@@ -19,7 +19,6 @@ $kep2->mentes("tesztkep/ubuntu_turkozes.gif",100);
 
 $kep3 = new kepkezelo($tesztkep);
 $kep3->atmeretezes(800,600);
-$kep3->font = "fonts/UbuntuMono-R.ttf";
 $kep3->szoveg("UBUNTU",64);
 $kep3->mentes("tesztkep/ubuntu_szoveg_w800.gif",100);
 

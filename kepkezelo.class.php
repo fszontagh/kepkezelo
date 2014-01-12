@@ -32,7 +32,7 @@ class kepkezelo {
     var $err_stat = 0;
 
     //default font
-    var $font = 'fonts/cour.ttf';
+    var $font = 'fonts/UbuntuMono-B.ttf';
 
     //new mimetype
     var $new_mime = 'png';
