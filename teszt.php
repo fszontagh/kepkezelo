@@ -27,4 +27,11 @@ $kep4 = new kepkezelo($tesztkep);
 $kep4->atmeretezes(300,300);
 $kep4->keret(5,"#1E90FF");
 $kep4->mentes("tesztkep/ubuntu_keret_w300.gif",100);
+
+
+$kep5 = new kepkezelo($tesztkep);
+$kep5->keret(5,"#000000");
+$kep5->effekt(IMG_FILTER_SMOOTH,5);
+$kep5->mentes("tesztkep/ubuntu_keret_blur.gif",100);
+
 ?>

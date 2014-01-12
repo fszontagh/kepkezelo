@@ -84,7 +84,25 @@ class kepkezelo {
 						return TRUE;
 				}
 		}
+		
+		/**
+		 * Kép szűrőkért nézd meg az elérhető paramétereket itt:
+		 * http://www.php.net/manual/en/function.imagefilter.php
+		 * */
+		public function effekt() {
+			if (function_exists("imagefilter")) {
+				if (func_num_args() < 1) {
+					return;
+				}
+				$args = func_get_args();
+				array_unshift($args,$this->ujkep);	
+				call_user_func_array("imagefilter",$args);
+			}
+		}
 		public function levagas( $width, $height ) {
+			if ($width == $this->uj_width AND $height == $this->uj_height) {
+				return;
+			}
 				$pos_x = 0;
 				$pos_y = 0;
 				$this->atmeretezes( $width, $height, true );
@@ -103,7 +121,10 @@ class kepkezelo {
 				$this->ujkep = $tmp;
 				unset( $tmp );
 		}
-		public function atmeretezes( $width, $height, $to_crop = false ) {
+		public function atmeretezes( $width, $height, $to_crop = false ) {			
+				if ($width == $this->uj_width AND $height == $this->uj_height) {
+					return;
+				}			
 				$orig_w = $width;
 				$orig_h = $height;
 				if ( $this->err_stat == 1 ) {
